@@ -16,7 +16,7 @@ jobs:
           pip install sphinx sphinx_rtd_theme myst_parser
       - name: Sphinx build
         run: |
-          export PYTHONPATH="$(pwd)/doc:$(pwd)/bin"
+          export PYTHONPATH="$(pwd)/doc:$(pwd)/src"
           sphinx-apidoc --ext-autodoc --ext-doctest -o doc src
           sphinx-build doc _build
       - name: Deploy to GitHub Pages
